@@ -1,10 +1,11 @@
-import { PlusIcon, DocumentIcon } from '@heroicons/react/24/outline';
+import { PlusIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import { useGetFormsQuery } from '../../services/formsApi';
 import { PageLayout } from '../../components/PageLayout';
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { ToggleButton } from '../../components/UI/ToggleButton';
+import { ToggleButton } from '../../components/ToggleButton';
+import { FormCard } from '../../components/FormCard';
 
 export function HomePage() {
   const { data: forms = [], error } = useGetFormsQuery();
@@ -34,15 +35,7 @@ export function HomePage() {
         </Link>
 
         {(isExpanded ? forms : forms.slice(0, 4)).map((form) => {
-          return (
-            <Link
-              key={form.id}
-              to={`/forms/${form.id}/fill`}
-              className="cursor-pointer flex items-center justify-center bg-gray-200 h-62 rounded-2xl border-4 border-white hover:border-gray-300"
-            >
-              <DocumentIcon className="h-8 w-8 text-black-500" />
-            </Link>
-          );
+          return <FormCard key={form.id} formId={form.id} />;
         })}
       </div>
     </PageLayout>
