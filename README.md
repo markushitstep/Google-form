@@ -12,6 +12,8 @@ A simplified Google Forms clone built as a monorepo using React, TypeScript, Red
 - Redux Toolkit (RTK Query)
 - React Router
 - Tailwind CSS
+- React Hot Toast (notifications)
+- Heroicons (icons)
 - GraphQL Code Generator
 - graphql-request
 
