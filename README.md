@@ -128,16 +128,6 @@ npm run codegen
 
 ---
 
-## 💡 Possible Improvements
-
-- Add persistent database storage
-- Add authentication
-- Improve UI/UX with animations or drag and drop
-- Add required/optional toggle per question
-- Add pagination for responses
-
----
-
 ⚠️ Requires Node.js 18+ and npm 9+ (for workspace support)
 
 ## 👨‍💻 Author
