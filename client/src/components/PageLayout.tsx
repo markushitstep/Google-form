@@ -14,7 +14,7 @@ export const PageLayout = ({
   bodyClassName = '',
 }: IProps) => {
   return (
-    <div style={{ backgroundColor: bgColor }} className="flex justify-center pt-6 pb-6">
+    <div style={{ backgroundColor: bgColor }} className="flex justify-center py-6">
       <div className={`flex flex-col gap-4 ${width} ${bodyClassName}`}>{children}</div>
     </div>
   );
