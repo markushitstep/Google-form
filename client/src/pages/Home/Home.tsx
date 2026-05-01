@@ -29,13 +29,20 @@ export function HomePage() {
       <div className="grid gap-10 grid-cols-5 grid-row-1">
         <Link
           to={`/forms/new`}
-          className="cursor-pointer flex items-center justify-center bg-gray-200 h-62 rounded-2xl border-4 border-white hover:border-gray-300"
+          className="cursor-pointer flex items-center justify-center bg-gray-200 h-62 rounded-2xl border-4 border-purple-300 hover:border-purple-400"
         >
           <PlusIcon className="h-16 w-16 text-black-500" />
         </Link>
 
         {(isExpanded ? forms : forms.slice(0, 4)).map((form) => {
-          return <FormCard key={form.id} formId={form.id} />;
+          return (
+            <FormCard
+              key={form.id}
+              id={form.id}
+              title={form.title}
+              description={form.description}
+            />
+          );
         })}
       </div>
     </PageLayout>
