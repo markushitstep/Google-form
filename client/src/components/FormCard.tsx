@@ -9,10 +9,10 @@ interface IProps {
 export const FormCard = ({ id, title, description }: IProps) => {
   return (
     <div className="flex h-62 flex-col justify-between rounded-2xl border-4 border-purple-300 bg-gray-200 p-5 transition hover:border-purple-400">
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center text-center">
         <h2 className="line-clamp-2 text-lg font-semibold text-gray-900">{title}</h2>
 
-        <p className="mt-2 line-clamp-3 text-sm text-gray-500">{description || 'No description'}</p>
+        <p className="mt-2 line-clamp-2 text-sm text-gray-500">{description || 'No description'}</p>
       </div>
 
       <div className="flex gap-2">

@@ -24,14 +24,6 @@ export function FillFormPage() {
     return <PageLayout>Form not found</PageLayout>;
   }
 
-  if (isLoading) {
-    return <PageLayout>Loading form...</PageLayout>;
-  }
-
-  if (isError || !form) {
-    return <PageLayout>Form not found</PageLayout>;
-  }
-
   return (
     <PageLayout bgColor="white" width="w-2/3" bodyClassName="shadow-lg py-8 px-4 rounded-2xl">
       <div className="mb-6">
