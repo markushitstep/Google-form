@@ -1,3 +1,4 @@
+import { ButtonBack } from '../../components/ButtonBack';
 import { FormQuestionField } from '../../components/FormQuestionField';
 import { PageLayout } from '../../components/PageLayout';
 import { useFormFiller } from '../../features/formFiller/useFormFiller';
@@ -26,8 +27,9 @@ export function FillFormPage() {
 
   return (
     <PageLayout bgColor="white" width="w-2/3" bodyClassName="shadow-lg py-8 px-4 rounded-2xl">
-      <div className="mb-6">
-        <h1 className="flex gap-2 text-3xl font-semibold">{form.title}</h1>
+      <div className="flex flex-col gap-4 mb-6">
+        <ButtonBack />
+        <h1 className="text-3xl font-semibold">{form.title}</h1>
 
         {form.description && <p className="text-gray-500">{form.description}</p>}
       </div>

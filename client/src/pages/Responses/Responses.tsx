@@ -1,3 +1,4 @@
+import { ButtonBack } from '../../components/ButtonBack';
 import { PageLayout } from '../../components/PageLayout';
 import { useFormResponses } from '../../features/formResponses/useFormResponse';
 
@@ -14,6 +15,7 @@ export const ResponsesPage = () => {
 
   return (
     <PageLayout bgColor="white" width="w-2/3" bodyClassName="shadow-lg py-8 px-4 rounded-2xl">
+      <ButtonBack />
       <div className="mb-8">
         <h1 className="text-3xl line-clamp-1 font-semibold">{form.title}</h1>
         <p className="mt-2 text-gray-500">

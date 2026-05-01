@@ -1,6 +1,7 @@
 import { PageLayout } from '../../components/PageLayout';
 import { useFormBuilder } from '../../features/formBuilder/useFormBuilder';
 import { QuestionCard } from '../../components/QuestionCard';
+import { ButtonBack } from '../../components/ButtonBack';
 
 export const CreateFormPage = () => {
   const {
@@ -22,6 +23,7 @@ export const CreateFormPage = () => {
 
   return (
     <PageLayout bgColor="white" width="w-2/3" bodyClassName="shadow-xl py-8 px-4 rounded-2xl">
+      <ButtonBack />
       <div className="flex flex-col gap-4">
         <input
           value={title}
