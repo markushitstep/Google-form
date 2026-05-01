@@ -48,7 +48,7 @@ export const formsApi = createApi({
     }),
 
     getForm: builder.query<FormQuery['form'], FormQueryVariables>({
-      query: () => ({
+      query: (variables) => ({
         document: gql`
           query Form($id: ID!) {
             form(id: $id) {
@@ -64,13 +64,14 @@ export const formsApi = createApi({
             }
           }
         `,
+        variables,
       }),
       transformResponse: (response: FormQuery) => response.form,
       providesTags: (_result, _error, variables) => [{ type: 'Form', id: variables.id }],
     }),
 
     getResponses: builder.query<ResponsesQuery['responses'], ResponsesQueryVariables>({
-      query: () => ({
+      query: (variables) => ({
         document: gql`
           query Responses($formId: ID!) {
             responses(formId: $formId) {
@@ -83,6 +84,7 @@ export const formsApi = createApi({
             }
           }
         `,
+        variables,
       }),
       transformResponse: (response: ResponsesQuery) => response.responses,
       providesTags: (_result, _error, variables) => [{ type: 'Responses', id: variables.formId }],
